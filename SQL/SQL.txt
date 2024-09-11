@@ -1,0 +1,4 @@
+SELECT prod.name, case when cat.name is NULL then NULL else cat.name end
+	FROM Products as prod
+	LEFT JOIN Products_Categories as prod_cat on prod.id = prod_cat.Product_ID
+	LEFT JOIN Categories as cat on prod_cat.Category_ID = cat.id
